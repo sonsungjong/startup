@@ -96,6 +96,10 @@
 !반응형 이미지
 */
 
+.responsive-image{
+    max-width: 100%;
+    height: auto;
+}
 
 /*
 ! 일반 스타일 규칙
@@ -185,4 +189,109 @@
 
 .hide{
     display:none;
+}
+
+/*
+! footer 설정
+*/
+
+.footerWrapper{
+    background-color: var(--color-green-100);
+}
+
+.footerLinks{
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLinks__socials{
+    display: flex;
+    gap: 10px;
+}
+
+.footerLinks__copyright{
+    font-size : var(--sub);
+    font-family: var(--font-2);
+}
+
+/*
+! @media 설정
+*/
+
+@media (max-width : 1200px){
+    .container{
+        max-width: 970px;
+    }
+
+    .common-title{
+        font-size: var(--h2);
+    }
+}
+
+@media (max-width:1024px){
+    .container{
+        max-width: 740px;
+    }
+
+    .common-title{
+        font-size:var(--h4);
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        max-width: 500px;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+
+    .white-btn, .dark-btn{
+        font-size: var(--h6);
+        padding: 8px 25px;
+    }
+
+    .navbar__menu{
+        z-index: 1;
+        background-color : var(--color-green-100);
+        position: absolute;
+        opacity: 100%;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items : center;
+        gap : 40px;
+    }
+
+    .navbar__menu--1{
+        margin-top: -200px;
+    }
+
+    .navbar__icons{
+        display: block;
+    }
+
+    .hidden{
+        z-index: -1;
+        opacity: 0%;
+    }
+
+    .footerLinks{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 568px){
+    .container{
+        max-width: 90%;
+    }
 }
